@@ -63,9 +63,9 @@ return [
             'bucket' => env('AWS_BUCKET'),
         ],
 
-        'custom_folder' => [
-            'driver' => 'custom',
-            'root'   => storage_path('/home/abushoaib/Downloads/upload'),
+        'custom' => [
+            'driver' => 'local',
+            'root'   => 'D:\GitHub_Projects'
         ],
 
     ],
