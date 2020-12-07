@@ -65,7 +65,7 @@ return [
 
         'custom' => [
             'driver' => 'local',
-            'root'   => 'D:\GitHub_Projects'
+            'root'   => '/home/abushoaib/Downloads/upload'
         ],
 
     ],

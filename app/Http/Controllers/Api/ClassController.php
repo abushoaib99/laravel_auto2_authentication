@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class ClassController extends Controller
 {
@@ -40,8 +41,9 @@ class ClassController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->file('file')->store('local');
-        echo $data;
+//        $data = $request->file('file')->store('local');
+        $file = $request->file('file');
+        $data = Storage::disk('custom')->put($file->getClientOriginalName(), $file);
         return response()->json([
             "data" => $data
         ]);
